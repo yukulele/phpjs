@@ -11,15 +11,13 @@ function isset() {
 
   var a = arguments,
     l = a.length,
-    i = 0,
-    undef;
-
+    i = 0
   if (l === 0) {
     throw new Error('Empty isset');
   }
 
   while (i !== l) {
-    if (a[i] === undef || a[i] === null) {
+    if (a[i] == null) {
       return false;
     }
     i++;
